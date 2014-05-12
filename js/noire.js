@@ -66,8 +66,45 @@
 
 	var Vector2 = function( x, y ){
 
+		return new Vector2.fn.init(x, y);
 
+	};
 
+	Vector2.fn = Vector2.prototype = {
+		constructor: Vector2,
+		init: function( x, y ){
+
+			if( x.constructor === Vector2 ){
+
+				Vector2.clone(x);
+
+			}
+			else {
+
+				this.x = x;
+				this.y = y;
+
+			};
+
+			return this;
+
+		},
+		translate: function( x, y ){
+
+			this += x;
+			this += y;
+
+			return this;
+
+		},
+		clone: function( vector ){
+
+			this.x = vector.x;
+			this.y = vector.y;
+
+			return this;
+
+		};
 	};
 
 })(window);
