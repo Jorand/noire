@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Noire</title>
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css"/>
+	<!-- <link type="text/css" rel="stylesheet" media="all" href="css/noire.css"/> -->
+	<script type="text/javascript" src="../Jo/jo/jo.js"></script>
+	<script type="text/javascript" src="js/noire.js"></script>
+	<script type="text/javascript">
+
+		Jo(function(){
+
+			var NoireGame = Noire({
+				width: window.innerWidth,
+				height: window.innerHeight
+			});
+
+			$(window).on("resize", function(){
+
+				NoireGame.resize(this.innerWidth, this.innerHeight);
+
+			});
+
+		});
+
+	</script>
+</head>
+<body>
+</body>
+</html>
