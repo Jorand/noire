@@ -70,7 +70,7 @@
 			// Draw line between each point
 			for( var point = 0; point < object.points.length; point++ ){
 
-				this.context.lineTo(object.points[point].x * this.percent, object.points[point].y * this.percent);
+				this.context.lineTo(object.points[point].x, object.points[point].y);
 
 			};
 
