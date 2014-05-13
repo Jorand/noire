@@ -16,6 +16,16 @@
 				height: window.innerHeight
 			});
 
+			NoireGame.addObject({
+				points: [
+					[0, 0],
+					[10, 0],
+					[10, 10],
+					[0, 10]
+				],
+				color: "#00ff00"
+			});
+
 			$(window).on("resize", function(){
 
 				NoireGame.resize(this.innerWidth, this.innerHeight);
